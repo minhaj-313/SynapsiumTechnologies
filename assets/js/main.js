@@ -143,12 +143,13 @@
   /**
    * Frequently Asked Questions Toggle
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
-  });
+ const questions = document.querySelectorAll('.faq-question');
 
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+        });
+    });
 
   
   /**
