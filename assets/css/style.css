@@ -849,80 +849,69 @@ section {
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
-  position: relative;
-  padding: 20px 0;
-  border-bottom: 1px solid #444444;
-  overflow: hidden;
-}
+   .faq-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
+        .faq-header {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333333;
+        }
 
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
+        .faq-item {
+            border-bottom: 1px solid #eaeaea;
+        }
 
-.faq .faq-container .faq-item h3 .num {
-  color: #F3184D;
-  padding-right: 5px;
-}
+        .faq-item:last-child {
+            border-bottom: none;
+        }
 
-.faq .faq-container .faq-item h3:hover {
-  color: #F3184D;
-}
+        .faq-question {
+            cursor: pointer;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #555555;
+            transition: background-color 0.3s;
+        }
 
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
+        .faq-question:hover {
+            background-color: #e0e0e0;
+        }
 
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
+        .faq-answer {
+            display: none;
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #666666;
+        }
 
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
+        .faq-question.active + .faq-answer {
+            display: block;
+        }
 
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: #F3184D;
-}
+        @media (max-width: 600px) {
+            .faq-container {
+                padding: 15px;
+            }
 
-.faq .faq-container .faq-active h3 {
-  color: #F3184D;
-}
+            .faq-header {
+                font-size: 1.2rem;
+            }
 
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: #F3184D;
-}
-
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
 
 /*--------------------------------------------------------------
 # Testimonials
