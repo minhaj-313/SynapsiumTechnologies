@@ -138,6 +138,20 @@
     }
   }, true)
 
+
+  
+  /**
+   * Frequently Asked Questions Toggle
+   */
+ const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+        });
+    });
+
+  
   /**
    * Scroll with ofset on page load with hash links in the url
    */
